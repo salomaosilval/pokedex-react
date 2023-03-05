@@ -1,0 +1,56 @@
+.pokemonCard {
+  display: flex;
+  box-shadow: 4px 4px 4px (0, 0, 0, 0.25);
+  border-radius: 3px;
+}
+
+.pokemonHeartBtn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.pokemonImageContainer {
+  padding: 0px 10px;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 10px 10px 0px;
+  flex: 1;
+}
+
+.cardTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardTop h3 {
+  text-transform: capitalize;
+}
+
+.cardBottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pokemonType {
+  display: flex;
+}
+
+.pokemonTypeText {
+  margin-right: 10px;
+  text-transform: capitalize;
+}
+
+.pokemonImage {
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+}
