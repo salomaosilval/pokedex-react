@@ -1,13 +1,18 @@
-import { SlHeart } from "react-icons/sl";
+import { useContext } from "react";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { FavoriteContext } from "../../contexts/favoriteContext";
 
 import "./styles.scss";
 
 export const Pokemon = (props) => {
   const { pokemon } = props;
+  const { favoritePokemons, updateFavoritePokemons } = useContext(FavoriteContext);
 
   const onHeartClick = () => {
-    console.log("Pode favoritar");
+    updateFavoritePokemons(pokemon.data.name);
   };
+
+  const heart = favoritePokemons.includes(pokemon.data.name) ? <FaHeart /> : <FaRegHeart />;
 
   return (
     <div className="pokemonCard">
@@ -30,7 +35,7 @@ export const Pokemon = (props) => {
             })}
           </div>
           <button className="pokemonHeartBtn" onClick={onHeartClick}>
-            <SlHeart />
+            {heart}
           </button>
         </div>
       </div>

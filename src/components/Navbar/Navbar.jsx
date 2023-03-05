@@ -1,6 +1,14 @@
+import { useContext } from "react";
+
+import { FaHeart } from "react-icons/fa";
+
+import { FavoriteContext } from "../../contexts/favoriteContext";
+
 import "./styles.scss";
 
 export const Navbar = () => {
+  const { favoritePokemons } = useContext(FavoriteContext);
+
   return (
     <nav>
       <div>
@@ -11,6 +19,9 @@ export const Navbar = () => {
             className="navbarImage"
           />
         </a>
+      </div>
+      <div>
+        {favoritePokemons.length} <FaHeart />
       </div>
     </nav>
   );
