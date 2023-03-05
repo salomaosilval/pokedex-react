@@ -21,3 +21,13 @@ export const getPokemons = async (limit = 50, offset = 0) => {
     console.log("Erro: ", error);
   }
 };
+
+export const getPokemonData = async (url) => {
+  try {
+    const response = await axios.get(url);
+
+    return response;
+  } catch (error) {
+    console.log("Erro: ", error);
+  }
+};
